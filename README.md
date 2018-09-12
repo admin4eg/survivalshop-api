@@ -1,2 +1,2 @@
-# survivalshop
-survivalshop plugins
+# SurvivalShop
+Oficial SurvivalShop Plugins repo
