@@ -1,0 +1,10 @@
+{
+	"FullName": "SurvivalShopPermissions",
+	"Description": "Permissions for SurvivalShop.Org",
+	"Version": 1.0,
+	"MinApiVersion": 3.0,
+	"Dependencies":[
+		"SurvivalHost",
+		"SurvivalShop"
+	]
+}
