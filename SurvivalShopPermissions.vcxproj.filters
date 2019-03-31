@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Private\Plugin.cpp">
+      <Filter>Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Private\Strings.cpp">
+      <Filter>Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Private\Utils.cpp">
+      <Filter>Private</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Public\Log.h">
+      <Filter>Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\Locales.h">
+      <Filter>Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Private\Plugin.h">
+      <Filter>Private</Filter>
+    </ClInclude>
+    <ClInclude Include="Private\Strings.h">
+      <Filter>Private</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\ShopApi.h">
+      <Filter>Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Private\Utils.h">
+      <Filter>Private</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\Permissions.h">
+      <Filter>Public</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Private">
+      <UniqueIdentifier>{e25843aa-3478-44ea-b250-07b1a32c45e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Public">
+      <UniqueIdentifier>{97eddbb8-70eb-4668-8a69-1b4f5087470e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
