@@ -4,22 +4,22 @@ Read in English: https://github.com/admin4eg/survivalshop-api/blob/master/README
 
 Пример custom.json:
 
+```javascript
 // при покупке товара пользователь будет добавлен в группу "Premium"
+{
+	"type": "permissions",
+	"do": "add",
+	"group": "Premium"
+}
+```
 
-`{`
-`	"type": "permissions",`
-`	"do": "add",`
-`	"group": "Premium"`
-`}`
-
+```javascript
 // при покупке товара пользователь будет удален из группы "RestrictBuilding"
+{
+	"type": "permissions",
+	"do": "remove",
+	"group": "RestrictBuilding"
+}
+```
 
-`{`
-`	"type": "permissions",`
-`	"do": "remove",`
-`	"group": "RestrictBuilding"`
-`}`
-
-Больше информации:
-
-http://www.survivalshop.wiki
+Больше информации: http://www.survivalshop.wiki
