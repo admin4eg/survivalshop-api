@@ -5,6 +5,7 @@ Read in English: https://github.com/admin4eg/survivalshop-api/blob/master/README
 Пример custom.json:
 
 // при покупке товара пользователь будет добавлен в группу "Premium"
+
 `{`
 `	"type": "permissions",`
 `	"do": "add",`
@@ -12,6 +13,7 @@ Read in English: https://github.com/admin4eg/survivalshop-api/blob/master/README
 `}`
 
 // при покупке товара пользователь будет удален из группы "RestrictBuilding"
+
 `{`
 `	"type": "permissions",`
 `	"do": "remove",`
