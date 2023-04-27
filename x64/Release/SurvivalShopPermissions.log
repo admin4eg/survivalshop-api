@@ -1,1 +1,7 @@
-﻿D:\SurvivalHost\GitHubShopApi\SurvivalShopPermissions.vcxproj(128,5): error : Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: ..\..\packages\cpprestsdk.v141.2.10.12.1\build\native\cpprestsdk.v141.targets.
+﻿  Plugin.cpp
+  Utils.cpp
+  Strings.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1391,5): warning MSB8012: TargetPath(D:\SurvivalHost\GitHubShopApi\x64\Release\SurvivalShopPermissions.dll) не соответствует значению свойства выходного файла (D:\SurvivalHost\GitHubShopApi\Release\ArkApi\Plugins\SurvivalShopPermissions\SurvivalShopPermissions.dll) для Linker. Это может привести к неправильной сборке проекта. Чтобы исправить это, убедитесь, что значения свойств $(OutDir), $(TargetName) и $(TargetExt) соответствуют значению, указанному в %(Link.OutputFile).
+  Создание кода
+  Создание кода завершено
+  SurvivalShopPermissions.vcxproj -> D:\SurvivalHost\GitHubShopApi\x64\Release\SurvivalShopPermissions.dll

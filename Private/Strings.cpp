@@ -59,7 +59,7 @@ namespace Strings
 	// get player-defined strings (defaults to plugin-defined)
 	Strings *Get(AShooterPlayerController *player)
 	{
-		return Get(Common::Tools::GetSteamId(player));
+		return Get(ArkApi::IApiUtils::GetSteamIdFromController(player));
 	}
 	Strings *Get(APlayerController *player)
 	{
@@ -69,7 +69,7 @@ namespace Strings
 	// set player-defined strings (usign AShooterPlayerController *, defaults to plugin-defined)
 	void Set(AShooterPlayerController *player, std::string locale)
 	{
-		const unsigned long long steam_id = Common::Tools::GetSteamId(player);
+		const unsigned long long steam_id = ArkApi::IApiUtils::GetSteamIdFromController(player);
 		if (steam_id == 0)
 			return;
 		SHLocale::Set(steam_id, locale);

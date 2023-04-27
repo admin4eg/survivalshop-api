@@ -51,12 +51,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(ProjectDir)Public;$(ProjectDir)Private;$(ProjectDir)..\..\..\Shared\ArkServerAPI\version\Core\Public;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)..\..\..\Shared\ArkServerAPI\x64\Ark;$(ProjectDir)..\..\x64\Release;$(ProjectDir)Lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(ProjectDir)Lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <LibraryPath>$(ProjectDir)..\..\..\Shared\ArkServerAPI\x64\Ark;$(ProjectDir)..\..\x64\Release;$(ProjectDir)Lib;$(ProjectDir)..\..\packages\cpprestsdk.v141.2.10.12.1\build\native\x64\lib;$(LibraryPath)</LibraryPath>
-    <IncludePath>$(ProjectDir)Public;$(ProjectDir)Private;$(ProjectDir)..\..\..\Shared\ArkServerAPI\version\Core\Public;$(ProjectDir)..\..\..\Shared\Plugins\Shared;$(ProjectDir)..\..\packages\cpprestsdk.v141.2.10.12.1\build\native\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)Lib;$(ProjectDir)packages\cpprestsdk.v141.2.10.12.1\build\native\x64\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)Public;$(ProjectDir)Private;$(ProjectDir)ArkServerApi\Public;$(ProjectDir)packages\cpprestsdk.v141.2.10.12.1\build\native\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -107,7 +107,6 @@
     <ClInclude Include="Public\Log.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Shared\Plugins\Shared\Ark.cpp" />
     <ClCompile Include="Private\Plugin.cpp" />
     <ClCompile Include="Private\Utils.cpp" />
     <ClInclude Include="Private\Plugin.h" />
@@ -119,12 +118,12 @@
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
-    <Import Project="..\..\packages\cpprestsdk.v141.2.10.12.1\build\native\cpprestsdk.v141.targets" Condition="Exists('..\..\packages\cpprestsdk.v141.2.10.12.1\build\native\cpprestsdk.v141.targets')" />
+    <Import Project="packages\cpprestsdk.v141.2.10.12.1\build\native\cpprestsdk.v141.targets" Condition="Exists('packages\cpprestsdk.v141.2.10.12.1\build\native\cpprestsdk.v141.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\packages\cpprestsdk.v141.2.10.12.1\build\native\cpprestsdk.v141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\cpprestsdk.v141.2.10.12.1\build\native\cpprestsdk.v141.targets'))" />
+    <Error Condition="!Exists('packages\cpprestsdk.v141.2.10.12.1\build\native\cpprestsdk.v141.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\cpprestsdk.v141.2.10.12.1\build\native\cpprestsdk.v141.targets'))" />
   </Target>
 </Project>
