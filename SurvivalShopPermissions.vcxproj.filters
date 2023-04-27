@@ -10,6 +10,9 @@
     <ClCompile Include="Private\Utils.cpp">
       <Filter>Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Shared\Plugins\Shared\Ark.cpp">
+      <Filter>Private</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Public\Log.h">
@@ -35,7 +38,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>

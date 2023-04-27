@@ -5,6 +5,8 @@
 // 
 ////////////////////////////////
 
+#include "Plugin.h"
+
 #include "Strings.h"
 
 // EN  EN  EN  EN  EN  EN  EN  EN  EN  EN  EN  EN  EN  EN  EN  EN  EN  EN  EN  EN  EN  EN  EN  EN  EN  EN  EN  EN  EN  EN
@@ -16,6 +18,12 @@ public: Ru() : En() {
 	this->ErrorChangingPermissions___0 = L"ѕроблемы изменени€ прав: {0}";
 	this->AddPermissions_0 = L"выдача прав {0}";
 	this->RemovePermissions_0 = L"сн€тие прав {0}";
+	this->Permission_0_HasBeenEnded = L"врем€ {0} закончилось";
+	this->Unlimited = L"бессрочно";
+	this->Minutes = L"минут";
+	this->Hours = L"часов";
+	this->Days = L"дней";
+	this->Years = L"лет";
 }
 };
 
@@ -51,7 +59,7 @@ namespace Strings
 	// get player-defined strings (defaults to plugin-defined)
 	Strings *Get(AShooterPlayerController *player)
 	{
-		return Get(ArkApi::IApiUtils::GetSteamIdFromController(player));
+		return Get(Common::Tools::GetSteamId(player));
 	}
 	Strings *Get(APlayerController *player)
 	{
@@ -61,7 +69,7 @@ namespace Strings
 	// set player-defined strings (usign AShooterPlayerController *, defaults to plugin-defined)
 	void Set(AShooterPlayerController *player, std::string locale)
 	{
-		const unsigned long long steam_id = ArkApi::IApiUtils::GetSteamIdFromController(player);
+		const unsigned long long steam_id = Common::Tools::GetSteamId(player);
 		if (steam_id == 0)
 			return;
 		SHLocale::Set(steam_id, locale);
